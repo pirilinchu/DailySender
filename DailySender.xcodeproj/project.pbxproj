@@ -1,0 +1,451 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0118D34504ECA1C162F32B99 /* Pods_DailySender.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9580F589F41C72E1DD52ED9 /* Pods_DailySender.framework */; };
+		FAB78238279C87D5000F5FEC /* DailySenderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB78237279C87D5000F5FEC /* DailySenderApp.swift */; };
+		FAB7823A279C87D5000F5FEC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB78239279C87D5000F5FEC /* ContentView.swift */; };
+		FAB7823C279C87D6000F5FEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAB7823B279C87D6000F5FEC /* Assets.xcassets */; };
+		FAB7823F279C87D6000F5FEC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAB7823E279C87D6000F5FEC /* Preview Assets.xcassets */; };
+		FAB78248279C98A0000F5FEC /* EnterField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB78247279C98A0000F5FEC /* EnterField.swift */; };
+		FAB7824A279C9DE6000F5FEC /* CheckField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB78249279C9DE6000F5FEC /* CheckField.swift */; };
+		FAB7824C279CB051000F5FEC /* TicketField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB7824B279CB051000F5FEC /* TicketField.swift */; };
+		FAB7824E279DA4C7000F5FEC /* Ticket.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB7824D279DA4C7000F5FEC /* Ticket.swift */; };
+		FAB78251279DA7E7000F5FEC /* Meeting.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB78250279DA7E7000F5FEC /* Meeting.swift */; };
+		FAB78253279DAF8D000F5FEC /* ItemProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB78252279DAF8D000F5FEC /* ItemProtocol.swift */; };
+		FAB78258279DC5E2000F5FEC /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB78257279DC5E2000F5FEC /* Utils.swift */; };
+		FAB7825A279DD56C000F5FEC /* DateField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB78259279DD56C000F5FEC /* DateField.swift */; };
+		FAB7825E279DDB85000F5FEC /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB7825D279DDB85000F5FEC /* File.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		869100951589BDC82F0F25ED /* Pods-DailySender.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DailySender.release.xcconfig"; path = "Target Support Files/Pods-DailySender/Pods-DailySender.release.xcconfig"; sourceTree = "<group>"; };
+		A9580F589F41C72E1DD52ED9 /* Pods_DailySender.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DailySender.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF9EA7BC948C8FFD24049A5F /* Pods-DailySender.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DailySender.debug.xcconfig"; path = "Target Support Files/Pods-DailySender/Pods-DailySender.debug.xcconfig"; sourceTree = "<group>"; };
+		FAB78234279C87D5000F5FEC /* DailySender.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailySender.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAB78237279C87D5000F5FEC /* DailySenderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailySenderApp.swift; sourceTree = "<group>"; };
+		FAB78239279C87D5000F5FEC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		FAB7823B279C87D6000F5FEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FAB7823E279C87D6000F5FEC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FAB78240279C87D6000F5FEC /* DailySender.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DailySender.entitlements; sourceTree = "<group>"; };
+		FAB78247279C98A0000F5FEC /* EnterField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterField.swift; sourceTree = "<group>"; };
+		FAB78249279C9DE6000F5FEC /* CheckField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckField.swift; sourceTree = "<group>"; };
+		FAB7824B279CB051000F5FEC /* TicketField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketField.swift; sourceTree = "<group>"; };
+		FAB7824D279DA4C7000F5FEC /* Ticket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ticket.swift; sourceTree = "<group>"; };
+		FAB78250279DA7E7000F5FEC /* Meeting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meeting.swift; sourceTree = "<group>"; };
+		FAB78252279DAF8D000F5FEC /* ItemProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemProtocol.swift; sourceTree = "<group>"; };
+		FAB78257279DC5E2000F5FEC /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		FAB78259279DD56C000F5FEC /* DateField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateField.swift; sourceTree = "<group>"; };
+		FAB7825D279DDB85000F5FEC /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FAB78231279C87D5000F5FEC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0118D34504ECA1C162F32B99 /* Pods_DailySender.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8BF8C1FC5A0F391424B6DDEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A9580F589F41C72E1DD52ED9 /* Pods_DailySender.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F562E0D79766A238A476B0ED /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CF9EA7BC948C8FFD24049A5F /* Pods-DailySender.debug.xcconfig */,
+				869100951589BDC82F0F25ED /* Pods-DailySender.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		FAB7822B279C87D5000F5FEC = {
+			isa = PBXGroup;
+			children = (
+				FAB78236279C87D5000F5FEC /* DailySender */,
+				FAB78235279C87D5000F5FEC /* Products */,
+				F562E0D79766A238A476B0ED /* Pods */,
+				8BF8C1FC5A0F391424B6DDEA /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		FAB78235279C87D5000F5FEC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FAB78234279C87D5000F5FEC /* DailySender.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FAB78236279C87D5000F5FEC /* DailySender */ = {
+			isa = PBXGroup;
+			children = (
+				FAB78254279DB059000F5FEC /* Data */,
+				FAB7824F279DA5A0000F5FEC /* Models */,
+				FAB78246279C9860000F5FEC /* UI */,
+				FAB78237279C87D5000F5FEC /* DailySenderApp.swift */,
+				FAB78239279C87D5000F5FEC /* ContentView.swift */,
+				FAB7823B279C87D6000F5FEC /* Assets.xcassets */,
+				FAB78240279C87D6000F5FEC /* DailySender.entitlements */,
+				FAB7823D279C87D6000F5FEC /* Preview Content */,
+			);
+			path = DailySender;
+			sourceTree = "<group>";
+		};
+		FAB7823D279C87D6000F5FEC /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				FAB7823E279C87D6000F5FEC /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FAB78246279C9860000F5FEC /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				FAB78247279C98A0000F5FEC /* EnterField.swift */,
+				FAB78249279C9DE6000F5FEC /* CheckField.swift */,
+				FAB7824B279CB051000F5FEC /* TicketField.swift */,
+				FAB78259279DD56C000F5FEC /* DateField.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		FAB7824F279DA5A0000F5FEC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FAB7824D279DA4C7000F5FEC /* Ticket.swift */,
+				FAB78250279DA7E7000F5FEC /* Meeting.swift */,
+				FAB78252279DAF8D000F5FEC /* ItemProtocol.swift */,
+				FAB7825D279DDB85000F5FEC /* File.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FAB78254279DB059000F5FEC /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				FAB78257279DC5E2000F5FEC /* Utils.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FAB78233279C87D5000F5FEC /* DailySender */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAB78243279C87D6000F5FEC /* Build configuration list for PBXNativeTarget "DailySender" */;
+			buildPhases = (
+				54612A0262AA7CB7780A5E42 /* [CP] Check Pods Manifest.lock */,
+				FAB78230279C87D5000F5FEC /* Sources */,
+				FAB78231279C87D5000F5FEC /* Frameworks */,
+				FAB78232279C87D5000F5FEC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DailySender;
+			productName = DailySender;
+			productReference = FAB78234279C87D5000F5FEC /* DailySender.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FAB7822C279C87D5000F5FEC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					FAB78233279C87D5000F5FEC = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+				};
+			};
+			buildConfigurationList = FAB7822F279C87D5000F5FEC /* Build configuration list for PBXProject "DailySender" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FAB7822B279C87D5000F5FEC;
+			productRefGroup = FAB78235279C87D5000F5FEC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FAB78233279C87D5000F5FEC /* DailySender */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FAB78232279C87D5000F5FEC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAB7823F279C87D6000F5FEC /* Preview Assets.xcassets in Resources */,
+				FAB7823C279C87D6000F5FEC /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		54612A0262AA7CB7780A5E42 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DailySender-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FAB78230279C87D5000F5FEC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAB7825A279DD56C000F5FEC /* DateField.swift in Sources */,
+				FAB7825E279DDB85000F5FEC /* File.swift in Sources */,
+				FAB78251279DA7E7000F5FEC /* Meeting.swift in Sources */,
+				FAB7823A279C87D5000F5FEC /* ContentView.swift in Sources */,
+				FAB7824E279DA4C7000F5FEC /* Ticket.swift in Sources */,
+				FAB7824A279C9DE6000F5FEC /* CheckField.swift in Sources */,
+				FAB78248279C98A0000F5FEC /* EnterField.swift in Sources */,
+				FAB78258279DC5E2000F5FEC /* Utils.swift in Sources */,
+				FAB7824C279CB051000F5FEC /* TicketField.swift in Sources */,
+				FAB78253279DAF8D000F5FEC /* ItemProtocol.swift in Sources */,
+				FAB78238279C87D5000F5FEC /* DailySenderApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		FAB78241279C87D6000F5FEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FAB78242279C87D6000F5FEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		FAB78244279C87D6000F5FEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF9EA7BC948C8FFD24049A5F /* Pods-DailySender.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = DailySender/DailySender.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"DailySender/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = myself.DailySender;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		FAB78245279C87D6000F5FEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 869100951589BDC82F0F25ED /* Pods-DailySender.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = DailySender/DailySender.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"DailySender/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = myself.DailySender;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FAB7822F279C87D5000F5FEC /* Build configuration list for PBXProject "DailySender" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAB78241279C87D6000F5FEC /* Debug */,
+				FAB78242279C87D6000F5FEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FAB78243279C87D6000F5FEC /* Build configuration list for PBXNativeTarget "DailySender" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAB78244279C87D6000F5FEC /* Debug */,
+				FAB78245279C87D6000F5FEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FAB7822C279C87D5000F5FEC /* Project object */;
+}
