@@ -10,7 +10,7 @@ import SwiftUI
 struct DateField: View {
     let isMeeting: Bool
     @State var text: String = ""
-    let onPressed: (Meeting) -> Void
+    let onChanged: (Date) -> Void
     @State var date: Date = Date()
     
     var prefix: String {
@@ -34,6 +34,7 @@ struct DateField: View {
                 .frame(maxWidth: .infinity)
             Button(action: {
                 date.addTimeInterval(TimeInterval(-86400))
+                onChanged(date)
             }){
               Image(systemName: "arrowtriangle.left.square")
                     .imageScale(.large)
@@ -42,6 +43,7 @@ struct DateField: View {
             
             Button(action: {
                 date.addTimeInterval(TimeInterval(86400))
+                onChanged(date)
             }){
               Image(systemName: "arrowtriangle.right.square")
                     .imageScale(.large)
@@ -61,7 +63,7 @@ struct DateField: View {
 
 struct DateField_Previews: PreviewProvider {
     static var previews: some View {
-        DateField(isMeeting: false, onPressed: {_ in })
+        DateField(isMeeting: false, onChanged: {_ in })
     }
 }
 

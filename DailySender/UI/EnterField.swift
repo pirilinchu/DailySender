@@ -29,7 +29,11 @@ struct EnterField: View {
     
     var body: some View {
         HStack (spacing: 4) {
-            TextField( placeHolder, text: $text)
+            TextField( placeHolder, text: $text, onCommit: {
+                guard text.isValidMeeting() else { return }
+                onPressed(Meeting(text: text, isMeeting: isMeeting))
+                text = ""
+            })
                 .textFieldStyle(PlainTextFieldStyle())
             Button("Add") {
                 guard text.isValidMeeting() else { return }

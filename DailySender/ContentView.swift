@@ -12,6 +12,12 @@ struct ContentView: View {
     //DATA
     @State var items: [Int: [Item]] = [:]
     
+    @State var date: Date = Date()
+    
+    var subject: String {
+        "ECI – Mobile - Daily Report - \(date.dateString())"
+    }
+    
     var mail: String {
         var whatIDid: String = "\nWhat I Did: \n\n"
         var whatIwillDo: String = "\nWhat I'll do: \n\n"
@@ -29,12 +35,13 @@ struct ContentView: View {
             }
         }
         if whatIwillDo == "\nWhat I'll do: \n\n" {
-            whatIwillDo += "Take new PBIs \n"
+            whatIwillDo += "- Take new PBIs \n"
         }
         
         var mail = whatIDid + whatIwillDo
         mail += "\nI’m blocked with: \n\n"
         mail += "- None \n"
+        mail += "\n\nSantiago Mendoza"
         
         return items.isEmpty ? "" : mail
     }
@@ -54,7 +61,7 @@ struct ContentView: View {
             }
         }
         if whatIwillDo.count == 1 {
-            whatIwillDo.append(ItemText("Take new PBIs"))
+            whatIwillDo.append(ItemText("- Take new PBIs"))
         }
         
         var mail = whatIDid + whatIwillDo
@@ -84,9 +91,25 @@ struct ContentView: View {
         GeometryReader { gp in
             HStack(spacing: 0){
                 VStack {
+                    Button() {
+                        items = [:]
+                        date = Date()
+                        DispatchQueue.main.async {
+                            NotificationCenter.default.post(name: .sendPressed, object: nil)
+                        }
+                    } label: {
+                        Text("Clear")
+                            .font(.system(size: 16))
+                    }
+                    .frame(
+                        minWidth: 0,
+                        maxWidth: .infinity,
+                        alignment: .topTrailing
+                      )
+                    .buttonStyle(ClearButtonStyle())
                     
-                    DateField(isMeeting: true) { _ in
-                        
+                    DateField(isMeeting: true) { dateChanged in
+                        date = dateChanged
                     }
                     .padding(.horizontal, 40)
                     .padding(.vertical, 5)
@@ -178,12 +201,13 @@ struct ContentView: View {
                     
                     Button {
                         //send
+                        Utils.shared.sendMail(body: mail, subject: subject)
                         //delete everything
                         items = [:]
+                        date = Date()
                         DispatchQueue.main.async {
                             NotificationCenter.default.post(name: .sendPressed, object: nil)
                         }
-                        
                     } label: {
                         Text("Send")
                             .font(.system(size: 16))
@@ -201,7 +225,7 @@ struct ContentView: View {
             }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .frame(minWidth: 1000, minHeight: 550)
+        .frame(minWidth: 1000, minHeight: 600)
     }
 }
 
@@ -218,6 +242,18 @@ struct SendButtonStyle: ButtonStyle {
             .foregroundColor(configuration.isPressed ? Color("PrimaryColor") : Color.blue)
             .background(Color.white)
             .padding(.bottom, 40)
+            .padding(.trailing, 40)
+    }
+    
+}
+
+struct ClearButtonStyle: ButtonStyle {
+    
+    func makeBody(configuration: Self.Configuration) -> some View {
+        configuration.label
+            .foregroundColor(configuration.isPressed ? Color("PrimaryColor") : Color.blue)
+            .background(Color("PrimaryColor"))
+            .padding(.bottom, 5)
             .padding(.trailing, 40)
     }
     

@@ -51,6 +51,23 @@ struct TicketField: View {
     var publisher = NotificationCenter.default.publisher(for: .sendPressed)
         .receive(on: RunLoop.main)
     
+    func okPressed(type: TicketType) {
+        guard text.isValidCode() else { return }
+        onPressed(Ticket(type: type, code: text, isFinished: isFinished))
+        //reset everything
+        isFinished = false
+        text = ""
+        withAnimation {
+            self.type = nil
+        }
+    }
+    
+    enum FocusField: Hashable {
+      case field
+    }
+
+    @FocusState private var focusedField: FocusField?
+    
     var body: some View {
         
         if let type = type {
@@ -58,7 +75,9 @@ struct TicketField: View {
                 Image(systemName: typeImage)
                     .foregroundColor(typeColor)
                     .imageScale(.large)
-                TextField( placeHolder, text: $text)
+                TextField( placeHolder, text: $text, onCommit: {
+                    okPressed(type: type)
+                })
                     .onReceive(Just(text)) { newValue in
                          let filtered = newValue.filter { "0123456789".contains($0) }
                          if filtered != newValue {
@@ -67,6 +86,10 @@ struct TicketField: View {
                     }
                     .foregroundColor(textColor)
                     .textFieldStyle(PlainTextFieldStyle())
+                    .focused($focusedField, equals: .field)
+                    .task {
+                        self.focusedField = .field
+                    }
                 Toggle(isOn: $isFinished){
                     Text("Done")
                 }
@@ -75,12 +98,7 @@ struct TicketField: View {
                 .frame(maxHeight: 10)
                 
                 Button("Add") {
-                    guard text.isValidCode() else { return }
-                    onPressed(Ticket(type: type, code: text, isFinished: isFinished))
-                    //reset everything
-                    isFinished = false
-                    text = ""
-                    self.type = nil
+                    okPressed(type: type)
                 }
                 .buttonStyle(EnterFieldButtonStyle())
             }
@@ -93,10 +111,13 @@ struct TicketField: View {
                 text = ""
                 self.type = nil
             }
+            .transition(.slide)
         }  else {
             HStack (spacing: 0) {
                 Button(action: {
-                    type = .feature
+                    withAnimation {
+                        type = .feature
+                    }
                 }) {
                     ZStack {
                         Image(systemName: "b.square.fill")
@@ -113,7 +134,9 @@ struct TicketField: View {
                 .background(Color("GreenColor"))
                 
                 Button(action: {
-                    type = .defect
+                    withAnimation {
+                        type = .defect
+                    }
                 }) {
                     ZStack {
                         Image(systemName: "d.square.fill")
@@ -137,6 +160,7 @@ struct TicketField: View {
                 text = ""
                 self.type = nil
             }
+            .transition(.slide)
         }
         
     }
